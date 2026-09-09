@@ -1,0 +1,6 @@
+{
+  "name": "DocuPulse",
+  "description": "On-device PDF scanner, document viewer, PDF editor, and QR code toolkit with 100% offline processing.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

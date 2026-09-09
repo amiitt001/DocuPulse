@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18181b" />
+      <stop offset="100%" stop-color="#09090b" />
+    </linearGradient>
+    <linearGradient id="laserGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.1" />
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="1" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.1" />
+    </linearGradient>
+    <filter id="laserGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Squircle -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+
+  <!-- Outer Viewfinder Corner Brackets -->
+  <path d="M 120 160 L 120 120 L 160 120" stroke="#71717a" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  <path d="M 392 160 L 392 120 L 352 120" stroke="#71717a" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  <path d="M 120 352 L 120 392 L 160 392" stroke="#71717a" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  <path d="M 392 352 L 392 392 L 352 392" stroke="#71717a" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+
+  <!-- Document Sheet -->
+  <rect x="160" y="148" width="192" height="236" rx="20" fill="#ffffff" />
+
+  <!-- Folded Corner / Accent -->
+  <path d="M 304 148 L 352 196 L 304 196 Z" fill="#e4e4e7" />
+  
+  <!-- Text Preview Lines -->
+  <rect x="190" y="210" width="132" height="12" rx="6" fill="#a1a1aa" />
+  <rect x="190" y="240" width="110" height="12" rx="6" fill="#d4d4d8" />
+  <rect x="190" y="270" width="124" height="12" rx="6" fill="#d4d4d8" />
+  <rect x="190" y="300" width="80" height="12" rx="6" fill="#d4d4d8" />
+
+  <!-- Active Cyan Scanner Laser Line -->
+  <line x1="140" y1="256" x2="372" y2="256" stroke="url(#laserGrad)" stroke-width="8" stroke-linecap="round" filter="url(#laserGlow)" />
+  <circle cx="256" cy="256" r="6" fill="#38bdf8" />
+</svg>
